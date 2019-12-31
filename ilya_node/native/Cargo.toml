@@ -1,0 +1,17 @@
+[package]
+name = "ilya_node"
+version = "0.1.0"
+authors = ["SallSoul <sally.r.soul@gmail.com>"]
+license = "MIT"
+build = "build.rs"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "ilya_node"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.3.3"
+
+[dependencies]
+neon = "0.3.3"
