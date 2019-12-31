@@ -1,3 +1,5 @@
+var ilya_node = require('ilya_node');
+
 class CalculatorApp {
   constructor(display_element) {
     this.display_element = display_element;
@@ -149,26 +151,14 @@ function bindCalculatorApp(svg_document) {
 }
 
 function init() {
+  var asset_map = new ilya_node.StaticAssetMap();
   var svg_object = document.getElementById("svg_object");
   if (svg_object == null) {
     console.error("svg_object not found!");
     return;
   }
-
-  // We don't can't bind the calculator app
-  // until the svg is loaded
-  svg_object.addEventListener(
-    "load",
-    function() {
-      console.log("SVG contentDocument Loaded!");
-      if (svg_object.contentDocument == null) {
-        console.error("contentDocument is still null!");
-      } else {
-        bindCalculatorApp(svg_object.contentDocument);
-      }
-    },
-    false
-  );
+  svg_object.innerHTML = asset_map.get("layout.svg");
+  bindCalculatorApp(document);
 }
 
 init();

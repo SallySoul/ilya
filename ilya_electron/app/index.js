@@ -3,6 +3,7 @@
 
 import path from 'path';
 import { app, crashReporter, BrowserWindow, Menu } from 'electron';
+import StaticAssitMap from 'ilya_node';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 

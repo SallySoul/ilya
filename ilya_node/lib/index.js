@@ -1,3 +1,3 @@
-var addon = require('../native');
+var ilya_node = require('../native');
 
-console.log(addon.hello());
+exports.StaticAssetMap = ilya_node.StaticAssetMap;

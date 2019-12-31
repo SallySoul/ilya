@@ -1,7 +1,7 @@
 {
-  "name": "calculator-test",
+  "name": "ilya_electron",
   "version/Users/russell/projects/Visions/electron-react-redux-boilerplate/package.json": "0.1.0",
-  "description": "Calculator Test App",
+  "description": "ilya prototype electron frontend",
   "main": "init.js",
   "author": {
     "name": "Russell Bentley",
@@ -10,11 +10,7 @@
   "repository": "https://github.com/SallySoul/calculator-test",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint --no-ignore *.js",
-    "format": "npm run private:format -- --write",
-    "private:format": "prettier *.js *.html package.json"
-  },
-"scripts": {
+    "build": "electron-build-env neon build ilya_node --release",
     "postinstall": "electron-builder install-app-deps",
     "develop": "gulp develop",
     "test": "electron-mocha --renderer -R spec --require @babel/register test/**/*.spec.js",
@@ -25,7 +21,10 @@
     "pack:win": "gulp pack-win",
     "pack:linux": "gulp pack-linux",
     "private:format": "prettier gulpfile.js babel.config.js \"tasks/*.js\" \"app/**/*.js\" \"test/**/*.js\""
-},
+  },
+  "dependencies": {
+    "ilya_node": "../ilya_node"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
@@ -33,10 +32,11 @@
     "browser-sync": "^2.26.7",
     "chai": "^4.1.0",
     "electron": "^6.0.10",
+    "electron-build-env": "^0.2.0",
     "electron-builder": "^21.2.0",
     "electron-devtools-installer": "^2.2.4",
     "electron-mocha": "^8.1.2",
-    "elint": "^6.7.2",
+    "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-react": "^7.14.3",
     "gulp": "^4.0.2",
@@ -85,5 +85,3 @@
     }
   }
 }
-
-
