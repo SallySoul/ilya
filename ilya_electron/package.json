@@ -1,6 +1,6 @@
 {
   "name": "ilya_electron",
-  "version/Users/russell/projects/Visions/electron-react-redux-boilerplate/package.json": "0.1.0",
+  "version": "0.1.0",
   "description": "ilya prototype electron frontend",
   "main": "init.js",
   "author": {
