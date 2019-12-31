@@ -5,6 +5,9 @@ import path from 'path';
 import { app, crashReporter, BrowserWindow, Menu } from 'electron';
 import StaticAssitMap from 'ilya_node';
 
+
+
+
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 let mainWindow = null;
@@ -44,10 +47,10 @@ app.on('ready', async () => {
   }
 
   mainWindow = new BrowserWindow({
-    width: 1000,
-    height: 800,
-    minWidth: 640,
-    minHeight: 480,
+    width: 375,
+    height: 667,
+    minWidth: 375,
+    minHeight: 667,
     show: false,
     webPreferences: {
       nodeIntegration: true,

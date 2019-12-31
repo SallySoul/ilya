@@ -14,6 +14,13 @@ To run:
   $ yarn
   $ yarn develop
   ```
+  
+To update `ilya_node`, run these commands.
+This process needs work. 
+
+```
+yarn upgrade ilya_node && yarn build
+```
 
 ## `package.json`
 
