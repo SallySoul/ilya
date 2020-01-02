@@ -1,12 +1,11 @@
 <svg
-  width="375"
-  height="667"
-  viewBox="0 0 375 667"
+  width="100%"
+  height="100%"
+  viewBox="8 7 375 667"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
   <style>text { font: normal 50px serif; fill: black; }</style>
-  <rect width="375" height="667" fill="white" />
   <rect x="8" y="7" width="359" height="653" rx="31" fill="#EEEDED" />
   <rect x="14" y="14" width="344" height="187" rx="31" fill="#DCD9D9" />
   <text

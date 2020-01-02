@@ -47,18 +47,19 @@ app.on('ready', async () => {
   }
 
   mainWindow = new BrowserWindow({
-    width: 375,
-    height: 667,
-    minWidth: 375,
-    minHeight: 667,
+    width: 367,
+    height: 660,
+    minWidth: 367,
+    minHeight: 660,
     show: false,
     webPreferences: {
       nodeIntegration: true,
     },
   });
+  mainWindow.setMenuBarVisibility(false)
 
   mainWindow.loadFile(path.resolve(path.join(__dirname, 'index.html')));
-
+  //Menu.setApplicationMenu(null);
   // show window once on first load
   mainWindow.webContents.once('did-finish-load', () => {
     mainWindow.show();
@@ -88,13 +89,16 @@ app.on('ready', async () => {
       mainWindow.on('closed', () => {
         mainWindow = null;
       });
+      console.log("Not Darwin");
+      mainWindow.removeMenu();
     }
   });
 
   if (isDevelopment) {
     // auto-open dev tools
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
 
+    /*
     // add inspect element on right click menu
     mainWindow.webContents.on('context-menu', (e, props) => {
       Menu.buildFromTemplate([
@@ -106,5 +110,7 @@ app.on('ready', async () => {
         },
       ]).popup(mainWindow);
     });
+
+    */
   }
 });
